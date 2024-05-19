@@ -94,7 +94,7 @@ def writeIPBlockFiles(output_dir, min_attempts):
 
 def main():
     parser = argparse.ArgumentParser(description='Process log file and spit out PF-compatible block files.')
-    parser.add_argument('--authlog', help='openbsd authlog file path.')
+    parser.add_argument('--authlog', help='openbsd authlog file path.', default='/var/log/authlog')
     parser.add_argument('--min_attempts', type=int, help='minimum number of failed login attemps before adding IP to blocklist.', default=1)
     parser.add_argument('--debug', action='store_true')
     parser.add_argument('--output_dir', help='directory in which to write ip block files.')
